@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --aqua-lightest: #e0f7fa;
+  --aqua-light: #b2ebf2;
+  --aqua-mid: #4dd0e1;
+  --aqua-main: #00bcd4;
+  --aqua-deep: #0097a7;
+  --aqua-darker: #006064;
+
+  --teal-glow: #00e5ff;
+  --sky-white: #f0fbff;
+  --glass-white: rgba(255, 255, 255, 0.55);
+  --glass-border: rgba(255, 255, 255, 0.75);
+  --glass-shadow: rgba(0, 188, 212, 0.18);
+
+  --text-dark: #0a2a2f;
+  --text-mid: #1a4a52;
+  --text-soft: #4a8a94;
+  --text-muted: #7ab8c0;
+
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body: 'Nunito', 'Segoe UI', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--text-dark);
+  min-height: 100vh;
+  background: linear-gradient(160deg,
+    #caf5fb 0%,
+    #a7edf7 15%,
+    #7ce0f0 30%,
+    #4dd0e1 50%,
+    #26c6da 65%,
+    #80deea 80%,
+    #b2f0f9 100%
+  );
+  background-attachment: fixed;
+  overflow-x: hidden;
+}
+
+/* Ambient light orbs for Frutiger Aero feel */
+body::before {
+  content: '';
+  position: fixed;
+  top: -20vh;
+  left: -10vw;
+  width: 70vw;
+  height: 70vw;
+  background: radial-gradient(circle, rgba(255,255,255,0.45) 0%, rgba(179,235,242,0.2) 40%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  bottom: -15vh;
+  right: -5vw;
+  width: 60vw;
+  height: 60vw;
+  background: radial-gradient(circle, rgba(0,229,255,0.18) 0%, rgba(0,188,212,0.1) 40%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Glass card base */
+.glass {
+  background: var(--glass-white);
+  backdrop-filter: blur(18px) saturate(1.8);
+  -webkit-backdrop-filter: blur(18px) saturate(1.8);
+  border: 1.5px solid var(--glass-border);
+  border-radius: 24px;
+  box-shadow:
+    0 8px 32px var(--glass-shadow),
+    0 2px 8px rgba(255,255,255,0.4) inset,
+    0 -1px 4px rgba(0,188,212,0.08) inset;
+}
+
+.glass-subtle {
+  background: rgba(255,255,255,0.38);
+  backdrop-filter: blur(10px) saturate(1.5);
+  -webkit-backdrop-filter: blur(10px) saturate(1.5);
+  border: 1px solid rgba(255,255,255,0.65);
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,188,212,0.12);
+}
+
+/* Bubble decorations */
+.bubble {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, rgba(255,255,255,0.7), rgba(200,245,255,0.3) 60%, transparent);
+  border: 1px solid rgba(255,255,255,0.6);
+  pointer-events: none;
+  animation: float linear infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0) rotate(0deg); opacity: 0.7; }
+  50% { opacity: 0.4; }
+  100% { transform: translateY(-100px) rotate(360deg); opacity: 0; }
+}
+
+/* Typography */
+h1, h2, h3 {
+  font-family: var(--font-display);
+}
+
+/* Page transitions */
+.page-enter {
+  animation: pageIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes pageIn {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(255,255,255,0.2);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0,188,212,0.4);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0,188,212,0.65);
+}
+
+/* Selection */
+::selection {
+  background: rgba(0,229,255,0.35);
+  color: var(--text-dark);
+}

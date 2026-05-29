@@ -1,0 +1,237 @@
+.root {
+  position: relative;
+  min-height: 100vh;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Ripple decorations */
+.ripple {
+  position: fixed;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255,255,255,0.35);
+  pointer-events: none;
+  z-index: 0;
+  animation: rippleAnim ease-in-out infinite;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes rippleAnim {
+  0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.35; }
+  50%       { transform: translate(-50%, -50%) scale(1.07); opacity: 0.12; }
+}
+
+/* Header */
+.header {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 3rem;
+  gap: 1rem;
+  animation: fadeDown 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--aqua-darker);
+  text-decoration: none;
+  padding: 0.45rem 1rem;
+  border-radius: 100px;
+  background: rgba(255,255,255,0.45);
+  border: 1px solid rgba(255,255,255,0.7);
+  backdrop-filter: blur(8px);
+  transition: background 0.2s, transform 0.2s;
+  min-width: 80px;
+}
+
+.backLink:hover {
+  background: rgba(255,255,255,0.65);
+  transform: translateX(-2px);
+}
+
+.headerCenter {
+  text-align: center;
+  flex: 1;
+}
+
+.headerEyebrow {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--aqua-deep);
+  margin-bottom: 0.2rem;
+}
+
+.headerTitle {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 4vw, 2.2rem);
+  font-weight: 500;
+  color: var(--text-dark);
+  line-height: 1.2;
+}
+
+.headerTitle em {
+  font-style: italic;
+  color: var(--aqua-darker);
+}
+
+.headerRight {
+  min-width: 80px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.countBadge {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-mid);
+  padding: 0.4rem 0.9rem;
+  white-space: nowrap;
+}
+
+/* Main grid */
+.main {
+  flex: 1;
+  position: relative;
+  z-index: 3;
+  padding: 2rem 3rem 4rem;
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Page card */
+.pageCard {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding: 2rem;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.3s ease;
+  animation: cardIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+  cursor: pointer;
+}
+
+@keyframes cardIn {
+  from { opacity: 0; transform: translateY(20px) scale(0.97); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.pageCard:hover {
+  transform: translateY(-5px) scale(1.015);
+  box-shadow:
+    0 16px 40px rgba(0,188,212,0.28),
+    0 2px 8px rgba(255,255,255,0.4) inset;
+}
+
+.cardShimmer {
+  position: absolute;
+  top: -30%;
+  left: -10%;
+  width: 120%;
+  height: 50%;
+  background: linear-gradient(135deg, rgba(255,255,255,0.5) 0%, transparent 55%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.cardIcon {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  color: var(--aqua-deep);
+  line-height: 1;
+}
+
+.cardBody {
+  flex: 1;
+  margin-bottom: 1.5rem;
+}
+
+.cardTitle {
+  font-family: var(--font-display);
+  font-size: 1.45rem;
+  font-weight: 500;
+  color: var(--text-dark);
+  margin-bottom: 0.6rem;
+  line-height: 1.25;
+}
+
+.cardExcerpt {
+  font-size: 0.9rem;
+  color: var(--text-soft);
+  line-height: 1.65;
+}
+
+.cardFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255,255,255,0.55);
+}
+
+.cardDate {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+}
+
+.cardArrow {
+  width: 18px;
+  height: 18px;
+  color: var(--aqua-deep);
+  transition: transform 0.25s ease;
+}
+
+.pageCard:hover .cardArrow {
+  transform: translateX(4px);
+}
+
+/* Footer */
+.footer {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  font-style: italic;
+  font-family: var(--font-display);
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .header {
+    padding: 1.5rem 1.5rem;
+    flex-wrap: wrap;
+  }
+  .main {
+    padding: 1.5rem 1.5rem 3rem;
+  }
+  .headerRight {
+    display: none;
+  }
+}
