@@ -44,7 +44,7 @@ export default function IntroductionPage() {
           {/* Body text — Kaustubh's own words */}
           <div className={styles.body}>
             <p>
-              Hey, I HAVE to congratulate you for finding this page. This is well… I&apos;ll go by the name Kaustubh, the date is 29/05/2026. I&apos;m 14 at the time and documenting my mental health.
+              Hey, I HAVE to congratulate you for finding this page. This is well… a place to document my mental health I&apos; My name is kaustubh, the date is 29/05/2026. I&apos;m 14 at the time and documenting my mental health.
             </p>
 
             <p>
