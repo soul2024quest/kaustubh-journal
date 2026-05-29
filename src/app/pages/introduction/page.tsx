@@ -62,7 +62,7 @@ export default function IntroductionPage() {
             </p>
 
             <p>
-              Anyways, my grandparents want me out of the house. I&apos;ve got a shitty dad. I need someone to talk to but I don&apos;t have anyone and I can&apos;t put my personal phone number on this website or I&apos;ll get thousands of calls.
+              Anyways, my grandparents want me out of the house. I&apos;ve got a well i dont wanna cuss alot so ill say.. a well idk bad dad? . I need someone to talk to but I don&apos;t have anyone and I can&apos;t put my personal phone number on this website or I&apos;ll get thousands of calls.
             </p>
 
             <p>
