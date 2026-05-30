@@ -14,7 +14,7 @@ const pages = [
   {
     slug: 'addictions',
     title: 'Addictions',
-    excerpt: "I've got a very serious porn addiction. Can't go a day without it…",
+    excerpt: "addictions..?",
     date: '30 / 05 / 2026',
     icon: '☽',
   },
