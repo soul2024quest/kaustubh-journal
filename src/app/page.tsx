@@ -1,7 +1,7 @@
 'use client'
 import Link from 'next/link'
 import Bubbles from '@/components/Bubbles'
-import styles from './page.module.css'
+import styles from './pages.module.css'
 
 const pages = [
   {
