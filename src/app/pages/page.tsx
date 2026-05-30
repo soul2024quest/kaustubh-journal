@@ -1,7 +1,7 @@
 'use client'
 import Link from 'next/link'
 import Bubbles from '@/components/Bubbles'
-import styles from './page.module.css'
+import styles from './pages.module.css'
 
 const pages = [
   {
@@ -11,16 +11,21 @@ const pages = [
     date: '29 / 05 / 2026',
     icon: '✦',
   },
+  {
+    slug: 'addictions',
+    title: 'Addictions',
+    excerpt: "I've got a very serious porn addiction. Can't go a day without it…",
+    date: '30 / 05 / 2026',
+    icon: '☽',
+  },
 ]
 
 export default function PagesIndex() {
   return (
     <div className={styles.root}>
       <Bubbles />
-
       <div className={styles.ripple} style={{ width: 400, height: 400, top: '5%', right: '8%', animationDuration: '9s' }} />
       <div className={styles.ripple} style={{ width: 250, height: 250, bottom: '10%', left: '5%', animationDuration: '13s', animationDelay: '2s' }} />
-
       <header className={styles.header}>
         <Link href="/" className={styles.backLink}>
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -28,17 +33,14 @@ export default function PagesIndex() {
           </svg>
           Home
         </Link>
-
         <div className={styles.headerCenter}>
           <p className={styles.headerEyebrow}>Archive</p>
           <h1 className={styles.headerTitle}>Kaustubh&apos;s <em>Journal</em></h1>
         </div>
-
         <div className={styles.headerRight}>
-          <span className={`glass-subtle ${styles.countBadge}`}>{pages.length} {pages.length === 1 ? 'page' : 'pages'}</span>
+          <span className={`glass-subtle ${styles.countBadge}`}>{pages.length} pages</span>
         </div>
       </header>
-
       <main className={styles.main}>
         <div className={styles.grid}>
           {pages.map((page, i) => (
@@ -64,7 +66,6 @@ export default function PagesIndex() {
           ))}
         </div>
       </main>
-
       <footer className={styles.footer}>
         <p>A quiet space of one&apos;s own.</p>
       </footer>
