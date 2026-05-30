@@ -1,7 +1,7 @@
 'use client'
 import Link from 'next/link'
 import Bubbles from '@/components/Bubbles'
-import styles from '../introduction/introduction.module.css'
+import styles from './introduction.module.css'
 
 export default function IntroductionPage() {
   return (
