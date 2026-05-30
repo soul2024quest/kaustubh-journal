@@ -66,21 +66,19 @@ export default function AddictionsPage() {
           </div>
         </div>
 
-        <div className={styles.pageNav}>
-          <Link href="/pages" className={styles.pageNavBtn}>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M19 12H5M11 6l-6 6 6 6" />
-            </svg>
-            All Pages
-          </Link>
-          <Link href="/pages/introduction" className={styles.pageNavBtn} style={{flexDirection: 'row-reverse'}}>
-            Introduction
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M19 12H5M13 6l6 6-6 6" />
-            </svg>
-          </Link>
-        </div>
-      </article>
-    </div>
+    <div className={styles.pageNav}>
+  <Link href="/pages/introduction" className={styles.pageNavBtn}>
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M19 12H5M11 6l-6 6 6 6" />
+    </svg>
+    Introduction
+  </Link>
+  <Link href="/pages" className={styles.pageNavBtn}>
+    All Pages
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M5 12h14M13 6l6 6-6 6" />
+    </svg>
+  </Link>
+</div>
   )
 }
