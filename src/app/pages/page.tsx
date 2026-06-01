@@ -18,6 +18,13 @@ const pages = [
     date: '30 / 05 / 2026',
     icon: '☽',
   },
+  {
+    slug: 'control',
+    title: 'Control',
+    excerpt: "Some parents can't just let their kids be…",
+    date: '01 / 06 / 2026',
+    icon: '✦',
+  },
 ]
 
 export default function PagesIndex() {
