@@ -73,12 +73,12 @@ export default function AddictionsPage() {
             </svg>
             Introduction
           </Link>
-          <Link href="/pages" className={styles.pageNavBtn}>
-            All Pages
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M5 12h14M13 6l6 6-6 6" />
-            </svg>
-          </Link>
+<Link href="/pages/control" className={styles.pageNavBtn}>
+  Control
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M5 12h14M13 6l6 6-6 6" />
+  </svg>
+</Link>
         </div>
       </article>
     </div>
