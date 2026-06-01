@@ -23,7 +23,7 @@ const pages = [
     title: 'Control',
     excerpt: "Some parents can't just let their kids be…",
     date: '01 / 06 / 2026',
-    icon: '✦',
+    icon: '☉',
   },
 ]
 
